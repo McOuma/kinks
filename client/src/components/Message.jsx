@@ -1,6 +1,6 @@
 import React from "react"
 import ladyimage from '../assets/images/sa.jpg'
-import ladies from "../assets/images/hairs.jpg"
+import ladies from "../assets/images/loc.jpg"
 import "./message.css"
 
 
@@ -23,7 +23,7 @@ function Message (){
                         <p> Your natural hair is a crown that deserves to shine brightly. We celebrate the beauty and versatility of Afro kinky hair and encourage you to embrace your uniqueness with confidence. Through inspiring stories, interviews with influencers and role models, and real-life experiences shared by our community, we aim to uplift and empower you to embrace your natural beauty and radiate with self-assurance.</p>
                     </div>
                     <div className=" col-md-6">
-                        <img  src={ladyimage} alt="image" />
+                        <img className="img-fluid" src={ladyimage} alt="image" />
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ function Message (){
                     <div className="row">
                         <p className="fs-3 fw-bold text-center text-danger pb-5">Join Our Community</p>
                         <div className="col-md-6">
-                            <img src={ladies} alt="pic"/>
+                            <img className="img-fluid" src={ladies} alt="pic"/>
                         </div>
                         <div className="col-md-6">
                             <p className="fs-4 fw-light text-center text-danger">Let's Connect</p>
@@ -42,6 +42,22 @@ function Message (){
                             <a className=" d-flex text-decoration-none justify-content-center" href="" >
                                 <button type="button" className="btn btn-danger">Subscribe</button>
                             </a>
+                            <p className="fs-5 fw-light text-center text-danger pt-3">Connect With Us On Our Socials</p>
+                            <ul className="d-flex flex-row list-unstyled justify-content-center">
+
+                                <li className="px-3">
+                                    <a href="" ><i className="bi bi-twitter text-danger"></i></a>
+                                </li>
+                                <li className="px-3">
+                                    <a href="" ><i className="bi bi-facebook text-danger"></i></a>
+                                </li>
+                                <li className="px-3">
+                                    <a href="" ><i className="bi bi-instagram text-danger"></i></a>
+                                </li>
+                                <li className="px-3" >
+                                    <a href="" ><i className="bi bi-threads text-danger"></i></a>
+                                </li>
+                            </ul>
 
                         </div>
                     </div>

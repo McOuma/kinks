@@ -11,7 +11,7 @@ function Hero() {
                 <div className="my-hero container pt-4">
                     <div className="row">
                         <div className="col-md-6">
-                            <img className="w-100vh" src={menpic} alt="lady"/>
+                            <img className="img-fluid" src={menpic} alt="lady"/>
                         </div>
                         <div className="col-md-6">
                             <p className="fs-2 fw-light text-center text-danger">Welcome to Kinks and Queens - Celebrating the Beauty of Afro Kinky Hair!</p>
