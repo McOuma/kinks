@@ -1,44 +1,18 @@
 import React from "react";
+import lady from "../assets/images/lady.jpg"
 
 function Hero() {
     return (
-        <main>
-
-            <div id="carouselExample" className=" container carousel slide ">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src="..." className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..."/>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-
-
-
-            <div classNameName="container pt-4">
-                <div classNameName="row">
-                    <div classNameName="col-md-6">Having Fun as Always</div>
-                    <div classNameName="col-md-6">Having another Fun</div>
-
-                </div>
-
+      <main>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <img src={lady} alt="lady"/>
+              <h1>Welcome to the first </h1>
             </div>
-
+          </div>
+          <h1>Welcome home</h1>
+        </div>
         </main>
     );
 }
