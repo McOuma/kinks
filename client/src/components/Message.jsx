@@ -11,7 +11,7 @@ function Message (){
             <div className="information container">
                 <p className="text-center fs-3 fw-medium text-danger ">Unleashing the Beauty of Afro Kinky Hair</p>
                 <div className="justify-content-center">
-                    <p>Welcome to Kinks and Queens, where we believe that every individual with Afro kinky hair has the power to explore, learn, and shine with their natural beauty. Our platform is dedicated to providing you with the knowledge, inspiration, and resources needed to embrace your unique hair texture and unleash your inner queen or king.</p>
+                    <p className="poppins-light fw-light">Welcome to Kinks and Queens, where we believe that every individual with Afro kinky hair has the power to explore, learn, and shine with their natural beauty. Our platform is dedicated to providing you with the knowledge, inspiration, and resources needed to embrace your unique hair texture and unleash your inner queen or king.</p>
                 </div>
                 <div className= "row">
                     <div className="col-md-6">

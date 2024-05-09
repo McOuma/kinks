@@ -3,20 +3,20 @@ import "./footer.css"
 function Footer (){
     return(
         <div>
-            <footer className="bg bg-light">
+            <footer className="footer bg-light">
                 <section className="one">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-2">
                             < a className="text-decoration-none" href="">
-                            <p className="fw-medium pt-3 text-danger">About Us</p>
+                            <p className="fw-medium pt-3 text-danger text-center">About Us</p>
                             </a>
                         </div>
                         <div className="col-sm-2">
                             < a className="text-decoration-none" href="">
-                            <p className="fw-medium text-danger pt-3">Collections</p>
+                            <p className="fw-medium text-danger pt-3 text-center">Collections</p>
                             </a>
-                            <div className="d-flex flex-column">
+                            <div className="d-flex flex-column text-center">
                                 <a className="text-decoration-none text-dark" href="">
                                     <p>Afro Styles</p>
                                 </a>
@@ -27,17 +27,22 @@ function Footer (){
                                 <a className="text-decoration-none text-dark"  href="">
                                     <p>Crochet</p>
                                 </a>
-
+                                <a className="text-decoration-none text-dark"  href="">
+                                    <p>Blogs</p>
+                                </a>
+                                <a className="text-decoration-none text-dark"  href="">
+                                    <p>Afro Products</p>
+                                </a>
                             </div>
                         </div>
                         <div className="col-sm-2">
                             <a className="text-decoration-none" href="">
-                            <p className="fw-medium pt-3 text-danger">Find a Salon</p>
+                            <p className="fw-medium pt-3 text-danger text-center">Find a Salon</p>
                             </a>
                         </div>
                         <div className="col-sm-2">
                             <a className="text-decoration-none" href="">
-                            <p className=" fw-medium pt-3 text-danger">Contact Us</p>
+                            <p className=" fw-medium pt-3 text-danger text-center">Contact Us</p>
                             </a>
                         </div>
                         <div className="col-sm-4">
@@ -47,7 +52,7 @@ function Footer (){
                                 <form className='d-flex flex-row '>
                                     <input className="form-control custom-input" type="search" placeholder="Email Address"
                                            aria-label="Search"/>
-                                    <button className="btn btn-outline-danger" type="submit">Subscribe</button>
+                                    <button className="btnc btn-outline-danger" type="submit">Subscribe</button>
                                 </form>
                                 <ul className="d-flex flex-row list-unstyled pt-3 px-5">
                                     <li className="pe-3">
@@ -86,12 +91,12 @@ function Footer (){
                 <section className="two">
                     <div className="d-flex justify-content-center flex-row">
                         <a className="text-decoration-none text-danger" href="">
-                        <p className="fs-6 fw-bold text-center px-5">Terms and Condition</p>
+                        <p className="fw-light text-center px-5">Terms & Condition</p>
                         </a>
                         <a className="text-decoration-none text-danger" href="">
-                        <p className="fs-6 fw-bold text-center px-5">Privacy Policy</p>
+                        <p className="fw-light text-center px-5">Privacy Policy</p>
                         </a>
-                        <p className="fs-6 fw-bold text-center px-5 text-danger">Copyright</p>
+                        <p className="fw-light text-center px-5 text-danger">Copyright</p>
                     </div>
                 </section>
             </footer>

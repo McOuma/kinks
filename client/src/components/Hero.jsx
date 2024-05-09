@@ -1,6 +1,5 @@
 import React from "react";
 import  menpic from "../assets/images/bantu.jpg"
-import Message  from "./Message";
 import  "./hero.css"
 
 
@@ -28,7 +27,6 @@ function Hero() {
                     </div>
                 </div>
             </section>
-        <Message/>
         </main>
     );
 }

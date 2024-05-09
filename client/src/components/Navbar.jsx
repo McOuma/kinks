@@ -30,7 +30,7 @@ function Navbar() {
                 <nav className="navbar navbar-expand-lg navbar-light ">
 
   <div className="container">
-    <a className="navbar-brand fs-2 fw-light text-danger" href="#">Kinks&Queens</a>
+    <a className="navbar-brand fs-2 fw-light text-danger poppins-bold" href="#">Kinks&Queens</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
