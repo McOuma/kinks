@@ -29,7 +29,7 @@ def get_comment(id):
     return {schema.dump(comment)}, 200
 
 
-@api.route('/comment/<int:id.', methods=["PUT"])
+@api.route('/comment/<int:id>', methods=["PUT"])
 def edit_comment(id):
     schema = CommentSchema(partial=True)
     comment = Comment.query.get_or_404(id)
