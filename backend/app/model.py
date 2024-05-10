@@ -2,7 +2,7 @@ from app import db,bcrypt
 
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password_hash = db.Column(db.String(100), nullable=False)
@@ -19,7 +19,6 @@ class User(db.Model):
         return cls.query.filter_by(username=username).first()
 
 
-
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
@@ -28,50 +27,62 @@ class Post(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     author = db.relationship('User', backref=db.backref('posts', lazy=True))
 
+    def __repr__(self):
+        return f"Post('{self.title}', '{self.publication_date}')"
+
 
 class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
-    post = db.relationship('Post', backref=db.backref('comments', lazy=True))
-    author_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    author = db.relationship('User', backref=db.backref('comments', lazy=True))
     text = db.Column(db.Text, nullable=False)
     publication_date = db.Column(db.DateTime, nullable=False, default=db.func.now())
+    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
+    post = db.relationship('Post', backref=db.backref('comments', lazy=True))
+    user_id = db.Column(db.Integer(), db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship('User', backref=db.backref('comments', lazy=True))
+    parent_comment_id = db.Column(db.Integer, db.ForeignKey('comment.id'))
+    parent_comment = db.relationship('Comment', remote_side=[id])
 
-
-class Tag(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.Text)
-    slug = db.Column(db.String(100), unique=True, nullable=False)
+    def __repr__(self):
+        return f"Comment('{self.text}', '{self.publication_date}')"
 
 
 class Reaction(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
+    id = db.Column(db.Integer(), primary_key=True)
+    reaction_type = db.Column(db.String(10), nullable=False)  # 'like' or 'dislike'
+    post_id = db.Column(db.Integer(), db.ForeignKey('post.id'), nullable=False)
     post = db.relationship('Post', backref=db.backref('reactions', lazy=True))
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user_id = db.Column(db.Integer(), db.ForeignKey('user.id'), nullable=False)
     user = db.relationship('User', backref=db.backref('reactions', lazy=True))
-    reaction_type = db.Column(db.String(10), nullable=False)
+
+    def __repr__(self):
+        return f"Reaction('{self.reaction_type}')"
+
+
+class Tag(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    name = db.Column(db.String(100), nullable=False, unique=True)
+    description = db.Column(db.Text)
+
+    def __repr__(self):
+        return f"Tag('{self.name}')"
 
 
 class Subscription(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    user = db.relationship('User', backref=db.backref('subscriptions', lazy=True))
-    blog_id = db.Column(db.Integer, db.ForeignKey('blog.id'), nullable=False)
-    blog = db.relationship('Blog', backref=db.backref('subscribers', lazy=True))
+    id = db.Column(db.Integer(), primary_key=True)
+    first_name = db.Column(db.String(), nullable=False)
+    last_name = db.Column(db.String(), nullable=False)
+    email = db.Column(db.String(), nullable=False, unique=True)
 
-
-class Blog(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.Text)
+    def __repr__(self):
+        return f"Subscription('{self.email}')"
 
 
 class Analytics(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
+    id = db.Column(db.Integer(), primary_key=True)
+    post_id = db.Column(db.Integer(), db.ForeignKey('post.id'), nullable=False)
     post = db.relationship('Post', backref=db.backref('analytics', lazy=True))
-    page_views = db.Column(db.Integer, default=0)
-    unique_visitors = db.Column(db.Integer, default=0)
+    page_views = db.Column(db.Integer(), default=0)
+    unique_visitors = db.Column(db.Integer(), default=0)
+
+
+
