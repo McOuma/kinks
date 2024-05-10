@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="35e77461-9ee2-4dab-a20d-d0254a3e7616" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api_v1/comment.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/comment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api_v1/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schema.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +50,11 @@
       <workItem from="1715254303442" duration="774000" />
       <workItem from="1715333069643" duration="1873000" />
       <workItem from="1715335455761" duration="72000" />
-      <workItem from="1715346760625" duration="954000" />
+      <workItem from="1715346760625" duration="4182000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/schema.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

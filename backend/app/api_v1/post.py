@@ -25,14 +25,15 @@ def get_posts():
 @api.route('/post/<int:id>', methods=["GET"])
 def get_post(id):
     schema = PostSchema()
-    post = Post.get_404(id)
+    post = Post.query.get_or_404(id)
     return {schema.dump(post)}, 200
 
 
 @api.route('/post/<int:id>', methods=["PUT"])
 def edit_post(id):
-    schema = PostSchema()
-    post = Post.get_404(id)
+    schema = PostSchema(partial=True)
+    post = Post.query.get_or_404(id)
+    post = schema.load(request.json, instance=post)
     db.session.add(post)
     db.session.commit()
     return {schema.dump(post)}, 201
@@ -40,9 +41,7 @@ def edit_post(id):
 
 @api.route('/post/<int:id>', methods=["DELETE"])
 def delete_post(id):
-    schema = PostSchema()
-    post = Post.get_404(id)
+    post = Post.query.get_or_404(id)
     db.session.delete(post)
     db.session.commit()
     return {"message": "post deleted"}, 200
-
