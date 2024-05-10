@@ -24,7 +24,7 @@ def register():
     user = User(**data)
     db.session.add(user)
     db.session.commit()
-    return {"msg": "user created", 'user':schema.dump()}, 201
+    return {"msg": "user created", 'user': schema.dump()}, 201
 
 
 @api.route("/user/<int:user_id>", methods=['GET'])
@@ -32,4 +32,3 @@ def get_user(user_id):
     user = User.get_404(user_id)
     schema = UserSchema()
     return {schema.dump(user)}, 201
-
