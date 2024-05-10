@@ -4,4 +4,4 @@ api = Blueprint('api', __name__)
 
 
 
-from . import analysis, blog, comment, post, product, reaction, sub, tag, user, error
+from . import analysis, auth, comment, post, product, reaction, sub, tag, user, error

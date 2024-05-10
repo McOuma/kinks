@@ -1,6 +1,6 @@
 from flask import jsonify
 from . import api
-from app.exeption import ValidationError
+from ..exeption import ValidationError
 
 
 @api.errorhandler(ValidationError)

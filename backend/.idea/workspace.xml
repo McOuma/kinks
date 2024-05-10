@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35e77461-9ee2-4dab-a20d-d0254a3e7616" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api_v1/error.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/error.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +14,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/schema.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="2gBCtfq0G7S31doXVB3d6oGkBqg" />
   <component name="ProjectViewState">
@@ -49,7 +50,7 @@
       <workItem from="1715254303442" duration="774000" />
       <workItem from="1715333069643" duration="1873000" />
       <workItem from="1715335455761" duration="72000" />
-      <workItem from="1715346760625" duration="8257000" />
+      <workItem from="1715346760625" duration="9803000" />
     </task>
     <servers />
   </component>
